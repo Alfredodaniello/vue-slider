@@ -45,11 +45,14 @@ createApp({
   },
   methods: {
     nextImg: function () {
-      alert;
-      this.activeItem++;
+      this.activeItem < this.slides.length - 1
+        ? this.activeItem++
+        : (this.activeItem = 0);
     },
     prevImg: function () {
-      this.activeItem--;
+      this.activeItem > 0
+        ? this.activeItem--
+        : (this.activeItem = this.slides.length - 1);
     },
   },
 }).mount("#app");
