@@ -54,5 +54,8 @@ createApp({
         ? this.activeItem--
         : (this.activeItem = this.slides.length - 1);
     },
+    activeImg: function (index) {
+      this.activeItem = index;
+    },
   },
 }).mount("#app");
